@@ -81,7 +81,7 @@ module.exports = (sequelize, DataTypes) => {
         this.dueDate === new Date().toLocaleDateString("en-CA")
           ? ""
           : this.dueDate;
-      return `${this.id}. ${checkbox} ${this.title} ${displayDate}`;
+      return `${this.id}. ${checkbox} ${this.title} ${displayDate}`.trim();
     }
   }
   Todo.init(
