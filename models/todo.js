@@ -1,6 +1,7 @@
 // models/todo.js
 "use strict";
 const { Model, Op } = require("sequelize");
+
 module.exports = (sequelize, DataTypes) => {
   class Todo extends Model {
     /**
@@ -11,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static async addTask(params) {
       return await Todo.create(params);
     }
+
     static async showList() {
       console.log("My Todo list \n");
 
